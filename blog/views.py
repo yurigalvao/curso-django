@@ -4,5 +4,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def blog(request):
-    print('BLOG')
-    return render(request, 'blog/index.html')
+    context = {
+        'text': 'Ola Blog',
+        'tittle': 'Pagina Exemplo - ',
+    }
+    return render(request, 'blog/index.html', context)
